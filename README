@@ -1,0 +1,17 @@
+1) Include the Trowelr Library into your application:
+   require_once( 'Trowelr.php' );
+
+2) Create an instance of Trowelr
+   $trowelr = new Trowelr( 'apache-tile.xml' );
+
+3) Search for a tile definition by name
+   $trowelr->getDefinitionByName( 'mydef' );
+
+
+-- Using a Colleciton --
+
+1) Create an instance of Trowelr_Collection
+   $trowelr = new Trowelr_Collection( array( 'apache-tile.xml', 'another-tile-doc.xml' ) );
+
+2) Search for a tile definition, and run up the extended definitions recursively
+   $trowelr->getDefinitionByName( 'mydef', true );
